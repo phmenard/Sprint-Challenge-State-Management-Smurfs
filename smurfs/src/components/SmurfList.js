@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getSmurfs } from "../actions";
 import Smurf from "./Smurf";
 
-//import '../css/index.css';
+import '../css/index.css';
 
 const SmurfList = props => {
   console.log("props from SmurfList:", props);
@@ -12,32 +12,36 @@ const SmurfList = props => {
     //console.log("Smurfs:",smurfs);
   },[]);
 
-  if (props.state.isLoading) {
+  if (props.isLoading) {
+    // Loading up the Smurf village
     return <h2>Loading...</h2>;
   }
 
   return (
-    <div className="slContainer">
-        <h4>Smurf Village {props.artist} </h4>
-    <div className="songList">
+    <div className="smurf-container">
+        
+    
       
-      {props.state.smurfs.length >= 1 ? (
+      {props.smurfs.length >= 1 ? (
         <>
-          {props.state.smurfs.map((smurf, i) => (
+          {props.smurfs.map((smurf, i) => (
             <Smurf key={i} smurf={smurf}/>
           ))}
         </>
       ) : (
         <p>Nothing to see here.</p>
       )}
-    </div>
+    
     </div>
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = state => { /// ????
   return {
-    state
+    smurfs: state.smurfs,
+    isLoading: state.isLoading
+
+    //state /// ??????
     /*name: state.name,
     age: state.age,  
     height: state.height,

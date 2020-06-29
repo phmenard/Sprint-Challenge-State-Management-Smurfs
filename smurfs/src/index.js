@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./css/index.css";
 import App from "./components/App";
+import Header from "./components/Header";
 
 import {createStore, applyMiddleware} from "redux";
 import reducer from "./reducers";
@@ -18,6 +19,7 @@ let store = createStore(reducer, applyMiddleware(logger, thunk));
 
 ReactDOM.render(
     <Provider store={store}>
+    <Header />    
     <App />
     </Provider>,
 document.getElementById("root")
