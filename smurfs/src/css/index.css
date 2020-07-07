@@ -1,0 +1,294 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+.App {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.App .smurf-info {
+  font-size: 2rem;
+  color: #c5cc88;
+  text-shadow: 2px 1px 1px black;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  height: 75px;
+  background-color: #7dbae6;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  border: 3px solid #8bb12a;
+}
+header h1 {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px black;
+}
+header .moving-in-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #801b28;
+  padding: 8px;
+  width: 75px;
+  background-color: #c5cc88;
+  border-radius: 5px;
+  cursor: pointer;
+}
+header .moving-in {
+  display: flex;
+  flex-direction: column;
+  height: 65px;
+  padding: 3px;
+}
+header .moving-in .button-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3px;
+}
+header .moving-in .button-container .add-smurf {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #801b28;
+  background-color: #c5cc88;
+  border-radius: 5px;
+  width: 50px;
+  padding: 2px;
+  cursor: pointer;
+}
+header .moving-in .button-container p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header .moving-in .smurf-image {
+  margin-bottom: 3px;
+}
+header .moving-in .smurf-image input {
+  width: 99%;
+}
+header .moving-in .new-smurf-data input {
+  height: 16px;
+  margin: 2px;
+}
+header .right-image img {
+  padding: 3px;
+  width: 150px;
+  height: 45px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/smurfbg.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.smurf-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  width: 80%;
+  flex-wrap: wrap;
+}
+.smurf-container h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.smurf {
+  display: flex;
+  border: 1px solid blue;
+  background-color: #7dbae6;
+  width: 225px;
+  margin: 2%;
+  padding: 2px;
+  border-radius: 3px;
+}
+.smurf .edit-smurf {
+  background-color: green;
+}
+.smurf .edit-smurf input {
+  margin: 1%;
+  width: 98%;
+}
+.smurf .smurf-image img {
+  border-radius: 3px;
+}
+.smurf .smurf-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+.smurf .smurf-data h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.smurf .smurf-data p {
+  margin: 3px;
+}
+.smurf .options {
+  margin-top: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.smurf .options .edit {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #801b28;
+  background-color: #c5cc88;
+  border-radius: 5px;
+  width: 40px;
+  padding: 2px;
+  cursor: pointer;
+}
+.smurf .options .remove {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #801b28;
+  background-color: #c5cc88;
+  border-radius: 5px;
+  width: 40px;
+  padding: 2px;
+  cursor: pointer;
+}

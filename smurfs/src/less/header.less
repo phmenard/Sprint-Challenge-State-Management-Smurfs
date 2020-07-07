@@ -1,0 +1,85 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 75px;
+    background-color: @header-background;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    border: 3px solid #8bb12a;
+
+    h1 {
+        color: @header-h1-color;
+        font-size: 2rem;
+        text-shadow: 1px 1px 1px @headre-h1-shadow-color;
+    }
+
+    .moving-in-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #801b28;
+        padding: 8px;
+        width: 75px;
+        background-color: #c5cc88;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .moving-in {
+        display: flex;
+        flex-direction: column;
+        
+        height: 65px;
+        padding: 3px;
+
+        .button-container{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 3px;
+            .add-smurf {
+                display: flex;
+                justify-content: center;
+                border: 1px solid #801b28;
+                background-color: #c5cc88;
+                border-radius: 5px;
+                width: 50px;
+                padding: 2px;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }   
+
+        .smurf-image{
+            margin-bottom: 3px;
+            
+            
+            input {
+                width: 99%
+            }
+        }
+
+        .new-smurf-data {
+            input {
+                height: 16px;
+                margin: 2px;
+            }
+        }
+
+        
+    }
+
+    .right-image {
+        img {
+            padding: 3px;
+            width: 150px;
+            height: 45px;
+        }
+    }
+}
